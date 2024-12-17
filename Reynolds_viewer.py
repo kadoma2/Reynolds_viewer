@@ -72,7 +72,7 @@ def main():
             yaxis=dict(title_font=dict(size=18), tickfont=dict(size=14)),
             zaxis=dict(title_font=dict(size=18), tickfont=dict(size=14), range=[z_min, z_max])
         ),
-        title=dict(text="Red surface is an indication of the boundary between laminar and turbulent flow (Re = 2000)", font=dict(size=20)),
+        title=dict(text="Red surface is the boundary between laminar and turbulent flow (Re = 2000)", font=dict(size=20)),
         margin=dict(l=50, r=50, t=50, b=50)  # マージン調整
     )
     st.plotly_chart(fig_3d)
