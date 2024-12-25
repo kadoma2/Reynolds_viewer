@@ -22,11 +22,11 @@ def main():
     viscosity = st.sidebar.number_input("Viscosity (Pa·s):", min_value=0.0, value=0.001016, format="%.6f")
     density = st.sidebar.number_input("Density (kg/m³):", min_value=0.0, value=999.974, format="%.3f")
     
-    x_min, x_max = st.sidebar.slider("X-axis Range (Flow rate, mL/min):", 1, 100, (1, 200))
-    y_min, y_max = st.sidebar.slider("Y-axis Range (Nozzle diameter, µm):", 1, 500, (1, 5000))
+    x_min, x_max = st.sidebar.slider("X-axis Range (Flow rate, mL/min):", 1, 200, (1, 20))
+    y_min, y_max = st.sidebar.slider("Y-axis Range (Nozzle diameter, µm):", 1, 5000, (1, 250))
     z_min, z_max = st.sidebar.slider("Z-axis Range:", 1, 10000, (1, 5000))
     
-    y_value = st.sidebar.number_input("Y-coordinate for XZ Plane (µm):", min_value=1, max_value=500, value=250)
+    y_value = st.sidebar.number_input("Y-coordinate for XZ Plane (µm):", min_value=1, max_value=5000, value=250)
 
     # 3Dグラフ生成
     x = np.linspace(x_min, x_max, 100)
